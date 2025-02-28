@@ -1,14 +1,59 @@
 <h1 class="first">ANGULAR</h1>
-<div class = "container mt-4">
+<div class="container mt-4">
     <ul class="list-group">
-        <li class="list-group-item border border-danger" *ngFor = "let skill of skills">
+        <li class="list-group-item border border-danger" *ngFor="let skill of skills">
             {{skill}}
         </li>
     </ul>
 </div>
-<div class = "container mt-5">
+<div class="container mt-5">
     <ul class="list-group">
-        <li class="list-group-item border border-success" *ngFor = "let coun of country">{{coun}}</li>
+        <li class="list-group-item border border-success" *ngFor="let coun of country">I love {{coun}}</li>
     </ul>
+</div>
+<div class="container mt-4">
+    <table class="table table-bordered border-danger">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>FirstName</th>
+                <th>lastName</th>
+                <th>email</th>
+                <th>contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let per of persons; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{per.fname}}</td>
+                <td>{{per.lname}}</td>
+                <td>{{per.email}}</td>
+                <td>{{per.contact}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<div class="container mt-4">
+    <div class="row">
+        <table class="table table-bordered table table-striped">
+            <thead>
+                <tr>
+                    <th>Sno</th>
+                    <th>Name</th>
+                    <th>age</th>
+                    <th>city</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let test of data; let i=index">
+                    <td>{{i + 1}}</td>
+                    <td>{{test.name}}</td>
+                    <td>{{test.age}}</td>
+                    <td>{{test.city}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 {{title}}
